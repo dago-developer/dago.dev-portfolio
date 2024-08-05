@@ -35,7 +35,7 @@
 /* -------- TYPING EFFECT --------- */
 
     var typingEffect = new Typed(".typedText", {
-        strings: ["Designer","Developer","Batman"],
+        strings: ["Designer","Developer"],
         
         loop : true,
         typeSpeed : 100,
