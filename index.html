@@ -53,7 +53,9 @@
                 </ul>
             </div>
             <div class="nav-button">
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>    
+                <a href="documents/CV_DanielGonzalez.docx" download="CV_DanielGonzalez.docx">
+                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+                </a>    
             </div>
             <div class="nav-menu-btn">
                 <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -70,31 +72,47 @@
                         <span>Daniel Gonzalez</span>
                     </div>
                     <div class="featured-name">
-                        <p>I'm a<span class="typedText"></span></p>
+                        <p>I'm a <span class="typedText"></span></p>
                     </div>
                     <div class="featured-text-info">
                         <p>Experienced fronted developer with a passion for creating visually stunning and user-friendly websites.</p>
                     </div>
                     <div class="featured-text-btn">
-                        <button class="btn blue-btn">Hire me</button>
+                        
+                        <a href="#contact"><button class="btn blue-btn">Hire me</button></a>
+                      
+                        <a href="documents/CV_DanielGonzalez.docx" download="CV_DanielGonzalez.docx">
                         <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+                        </a>
                     </div>
                     <div class="social_icons">
-                        <div class="icon">
-                            <i class="uil uil-instagram"></i>
+                        <a href="https://www.instagram.com/dago.dev/" target="_blank" class="custom-link">
+                        <div class="icon">   
+                            <i class="uil uil-instagram"></i>   
                         </div>
+                        </a>
+                        </a>
+                        <a href="https://www.linkedin.com/in/danielgonzalez-dev/" target="_blank" class="custom-link">
                         <div class="icon">
                             <i class="uil uil-linkedin-alt"></i>
                         </div>
+                        </a>
+                        <a href="https://github.com/dago-developer"target="_blank" class="custom-link">
                         <div class="icon">
                             <i class="uil uil-github-alt"></i>
                         </div>
+                        </a>
+                        <a href="#" id="chiguireLinkMain">
+                            <div class="icon">
+                                <img src="assets/images/chiguire.png" alt="chigüirito" class="chigüirito">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="featured-imagen">
                     <div class="imagen">
 
-                        <img src="assets/images/daniel-logo-2png" alt="avatar">
+                        <img src="assets/images/daniel-logo-2.png" alt="avatar">
 
                     </div>
                 </div>
@@ -116,9 +134,9 @@
                         <div class="about-info">
                             <h3>My introduction</h3>
                             <p>I am well -versed in HTML, CSS and JavaScript, and other cutting edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) Wordpress</p>
-                            <div class="about-btn">
+                            <!-- <div class="about-btn">
                                 <button class="btn">Download CV <i class="uil uil-import"></i></button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col">
@@ -194,18 +212,21 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Name">
-                                <input type="text" class="input-field" placeholder="Email">
+                        <form id="contactForm" action="https://formspree.io/f/mjkbwqke" method="POST">
+                            <div class="form-control">
+                                <div class="form-inputs">
+                                    <input type="text" name="name" class="input-field" placeholder="Name" required>
+                                    <input type="email" name="email" class="input-field" placeholder="Email" required>
+                                </div>
+                                <div class="text-area">
+                                    <textarea name="message" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                                </div>
                             </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
+                        </form>
+                        
                     </div>
                 </div>
             </section>
@@ -235,14 +256,33 @@
             </ul>
         </div>
         <div class="footer-social-icons">
+            <a href="https://www.instagram.com/dago.dev/" target="_blank">
             <div class="icon">
                 <i class="uil uil-instagram"></i>
             </div>
+            </a>
+            <a href="https://www.linkedin.com/in/danielgonzalez-dev/" target="_blank" class="custom-link">
             <div class="icon">
                 <i class="uil uil-linkedin-alt"></i>
             </div>
+            </a>
+            <a href="https://github.com/dago-developer"target="_blank" class="custom-link">
             <div class="icon">
                 <i class="uil uil-github-alt"></i>
+            </div>
+            </a>
+            <a href="#" id="chiguireLinkFooter">
+                <div class="icon">
+                    <img src="assets/images/chiguire.png" alt="chigüirito" class="chigüirito">
+                </div>
+            </a>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="assets/images/chiguire-dev.jpeg" alt="Capybara" class="modal-image">
+                <p>I lied to you, I'm not a human, I'm actually this capybara.</p>
             </div>
         </div>
         <div class="bottom-footer">

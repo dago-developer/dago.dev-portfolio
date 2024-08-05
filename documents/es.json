@@ -1,0 +1,37 @@
+{
+    "welcome": "Daniel Gonzalez",
+    "intro": "Soy un <span class=\"typedText\"></span>",
+    "description": "Desarrollador frontend con experiencia y pasión por crear sitios web visualmente impresionantes y fáciles de usar.",
+    "hireMe": "Contrátame",
+    "downloadCv": "Descargar CV",
+    "aboutMe": "Sobre mí",
+    "introduction": "Estoy bien versado en HTML, CSS y JavaScript, y otros marcos y bibliotecas de vanguardia, lo que me permite implementar características interactivas. Además, tengo experiencia trabajando con sistemas de gestión de contenido (CMS) Wordpress",
+    "frontendSkills": "Frontend",
+    "frontendSkillsList": ["HTML", "CSS", "Bootstrap", "JavaScript", "React"],
+    "backendSkills": "Backend",
+    "backendSkillsList": ["PHP", "Laravel", "Python"],
+    "databaseSkills": "Base de datos",
+    "databaseSkillsList": ["DBeaver", "Postman"],
+    "projects": "Proyectos",
+    "completed": "Completados",
+    "completedProjects": "15+ Proyectos Terminados",
+    "clients": "Clientes",
+    "happyClients": "12+ Clientes Felices",
+    "experience": "Experiencia",
+    "yearsExperience": "1+ Año en el campo",
+    "getInTouch": "Ponte en contacto",
+    "contactInfo": {
+        "findMe": "Encuéntrame",
+        "email": "Email: contact.dago.dev@gmail.com",
+        "instagram": "Instagram: @dago.dev"
+    },
+    "formLabels": {
+        "name": "Nombre",
+        "email": "Email",
+        "message": "Mensaje",
+        "send": "Enviar"
+    },
+    "footer": {
+        "copyright": "Derechos de autor &copy; <a href=\"#home\" style=\"text-decoration: none;\">Daniel Gonzalez</a> - Todos los derechos reservados"
+    }
+}

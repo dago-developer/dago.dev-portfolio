@@ -9,11 +9,6 @@
         }
     }
     
-
-
-
-
-
 /* -------- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING --------- */
 
     window.onscroll = function() {headerShadow()};
@@ -42,9 +37,6 @@
         backSpeed : 80,
         backDelay : 2000
     });
-
-
-
 
 /* -------- SCROLL REVEAL ANIMATION --------- */
 
@@ -116,3 +108,85 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive);
+
+
+/* -------------CHIGUIRE MODAL  ------------- */
+// Obtener elementos
+var modal = document.getElementById("modal");
+var chiguireLinkMain = document.getElementById("chiguireLinkMain");
+var chiguireLinkFooter = document.getElementById("chiguireLinkFooter");
+var span = document.getElementsByClassName("close")[0];
+
+// Función para abrir el modal
+function openModal() {
+    modal.style.display = "flex";
+    setTimeout(() => {
+        modal.style.opacity = "1";
+        document.querySelector(".modal-content").style.transform = "scale(1)";
+    }, 10); // Un pequeño retraso para asegurar la transición
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    modal.style.opacity = "0";
+    document.querySelector(".modal-content").style.transform = "scale(0.7)";
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300); // Tiempo igual a la duración de la transición
+}
+
+// Asignar evento a los enlaces
+function setupLinks() {
+    [chiguireLinkMain, chiguireLinkFooter].forEach(link => {
+        link.onclick = function(event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado
+            openModal();
+        }
+    });
+}
+
+// Inicializar los eventos
+setupLinks();
+
+// Cuando el usuario hace clic en <span> (x), cierra el modal
+span.onclick = function() {
+    closeModal();
+}
+
+// Cuando el usuario hace clic en cualquier lugar fuera del modal, cierra el modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+
+ /* ------------- FORM BOX ------------ */
+
+ document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
+    const formData = new FormData(this);
+
+    fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Mensaje enviado exitosamente");
+            this.reset(); // Reiniciar el formulario
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("Error al enviar el mensaje");
+                }
+            })
+        }
+    })
+});
