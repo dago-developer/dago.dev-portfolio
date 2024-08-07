@@ -190,3 +190,73 @@ window.onclick = function(event) {
         }
     })
 });
+
+/* ----------- TRANSLADABLE BUTTON FUNCTION && TYPING EFFECT --------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const langToggleBtn = document.getElementById("lang-toggle");
+    const langIcon = document.getElementById('lang-icon');
+    let currentLang = 'en';
+
+    const loadTranslations = (lang) => {
+        fetch(`documents/${lang}.json`)
+            .then(response => response.json())
+            .then(translations => {
+                document.querySelectorAll('.translatable').forEach(element => {
+                    const key = element.dataset.key;
+                    if (translations[key]) {
+                        const icon = element.querySelector('i') ? element.querySelector('i').outerHTML : '';
+                        if (element.tagName === 'BUTTON') {
+                            element.innerHTML = translations[key] + ' ' + icon;
+                        } else {
+                            element.innerHTML = icon + ' ' + translations[key];
+                        }
+                    }
+                });
+
+                langToggleBtn.classList.toggle('english', lang === 'en');
+                langToggleBtn.classList.toggle('spanish', lang === 'es');
+
+                langIcon.style.opacity = 0; // Inicia transición de opacidad
+                setTimeout(() => {
+                    langIcon.src = lang === 'en' ? 'assets/images/united-states.png' : 'assets/images/flag.png';
+                    langIcon.style.opacity = 1; // Finaliza transición de opacidad
+                }, 300); // Tiempo de transición para sincronizar con la carga de traducciones
+
+                // Re-inicializar el efecto de Typed.js después de la traducción
+                const typedTextElement = document.querySelector('.typedText');
+                if (typedTextElement) {
+                    typedTextElement.innerHTML = '';  // Limpiar el contenido previo
+                    new Typed(".typedText", {
+                        strings: currentLang === 'en' ? ["Designer", "Developer"] : ["Diseñador", "Desarrollador"],
+                        loop: true,
+                        typeSpeed: 100,
+                        backSpeed: 80,
+                        backDelay: 2000
+                    });
+                }
+            });
+    };
+
+    const updateTextContent = (lang) => {
+        document.querySelectorAll('.translatable').forEach(element => {
+            element.style.opacity = 0;
+        });
+        langIcon.style.opacity = 0;
+
+        setTimeout(() => {
+            loadTranslations(lang);
+            document.querySelectorAll('.translatable').forEach(element => {
+                element.style.opacity = 1;
+            });
+            langIcon.style.opacity = 1;
+        }, 300);
+    };
+
+    langToggleBtn.addEventListener("click", () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        updateTextContent(currentLang);
+    });
+
+    updateTextContent(currentLang);
+});

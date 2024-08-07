@@ -1,17 +1,16 @@
-{
+{   
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
     "welcome": "Daniel Gonzalez",
     "intro": "I'm a <span class=\"typedText\"></span>",
     "description": "Experienced fronted developer with a passion for creating visually stunning and user-friendly websites.",
     "hireMe": "Hire me",
     "downloadCv": "Download CV",
     "aboutMe": "About me",
-    "introduction": "I am well-versed in HTML, CSS and JavaScript, and other cutting-edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) Wordpress",
-    "frontendSkills": "Frontend",
-    "frontendSkillsList": ["HTML", "CSS", "Bootstrap", "JavaScript", "React"],
-    "backendSkills": "Backend",
-    "backendSkillsList": ["PHP", "Laravel", "Python"],
-    "databaseSkills": "Database",
-    "databaseSkillsList": ["DBeaver", "Postman"],
+    "scrollDown":"Scroll Down",
+    "introduction": "My introduction",
+    "introductionText": "I am well-versed in HTML, CSS and JavaScript, and other cutting-edge frameworks and libraries, which allows me to implement interactive features. Additionally, I have experience working with content management systems (CMS) Wordpress.",
     "projects": "Projects",
     "completed": "Completed",
     "completedProjects": "15+ Finished Projects",
@@ -19,19 +18,12 @@
     "happyClients": "12+ Happy Clients",
     "experience": "Experience",
     "yearsExperience": "1+ Year in the field",
-    "getInTouch": "Get in touch",
-    "contactInfo": {
-        "findMe": "Find me",
-        "email": "Email: contact.dago.dev@gmail.com",
-        "instagram": "Instagram: @dago.dev"
-    },
-    "formLabels": {
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send"
-    },
-    "footer": {
-        "copyright": "Copyright &copy; <a href=\"#home\" style=\"text-decoration: none;\">Daniel Gonzalez</a> - All rights reserved"
-    }
+    "getInTouch": "Get in touch!",
+    "contactInfo": "Do you have a project in mind?, contact me here",
+    "findMe": "Find me",
+    "email": "Email: contact.dago.dev@gmail.com",
+    "send": "Send",
+    "modalText": "I lied to you, I'm not a human, I'm actually this capybara.",
+    "footerBottom": "Copyright &copy; <a href=\"#home\" style=\"text-decoration: none;\">Daniel Gonzalez</a> - All rights reserved"
+    
 }
